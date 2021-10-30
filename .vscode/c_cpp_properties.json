@@ -2,28 +2,20 @@
   "configurations": [
     {
       "defines": [
+        "ID=\"RumbleMod\"",
+        "VERSION=\"0.1.0\"",
         "__GNUC__",
-        "__aarch64__",
-        "VERSION=\"1.1.0\"",
-        "ID=\"particletuner\""
+        "__aarch64__"
       ],
       "includePath": [
-        "${workspaceFolder}/extern/libil2cpp/il2cpp/libil2cpp",
-        "${workspaceFolder}/extern/codegen/include",
-        "${env:ANDROID_NDK_HOME}/sources/cxx-stl/llvm-libc++/include",
-        "${env:ANDROID_NDK_HOME}/sysroot/usr/include",
-        "${env:ANDROID_NDK_HOME}/sources/cxx-stl/llvm-libc++abi/include",
+        "${workspaceFolder}/**",
         "${workspaceFolder}/shared",
-        "${env:ANDROID_NDK_HOME}/sysroot/usr/include/arm-linux-androideabi",
-        "${workspaceFolder}/extern",
-        "${workspaceFolder}/extern/beatsaber-hook/shared",
-        "${workspaceFolder}/extern/questui/shared",
-        "${workspaceFolder}/extern/modloader/shared",
         "${workspaceFolder}/include",
-        "${workspaceFolder}/shared",
-        "${workspaceFolder}"
+        "${workspaceFolder}/extern/**",
+        "${workspaceFolder}/extern/libil2cpp/il2cpp/libil2cpp",
+        "C:/Users/USER/AppData/Roaming/Android/NDK/**"
       ],
-      "name": "Quest Playground",
+      "name": "Quest",
       "cStandard": "c11",
       "cppStandard": "c++20",
       "intelliSenseMode": "clang-x64"
