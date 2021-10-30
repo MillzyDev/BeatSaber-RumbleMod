@@ -54,4 +54,7 @@ tombstone_*
 
 # IDE Stuff
 .idea
-.vscode
+.vscode/*
+
+# CMake Files
+cmake-build-debug
