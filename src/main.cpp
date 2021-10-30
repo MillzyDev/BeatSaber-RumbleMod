@@ -1,32 +1,71 @@
-#include "modloader.hpp"
-#include "rumble_private.hpp"
-#include "rumble.hpp"
-#include "Config.hpp"
-#include "RRQModSettings.hpp"
+#include "main.hpp"
+#include "Config/ModConfig.hpp"
 
-static ModInfo modInfo;
+#include "IHook.hpp"
+using namespace RumbleMod;
 
-Logger& getLogger() {
-    static auto* logger = new Logger(modInfo);
-    return *logger;
-}
+#include "custom-types/shared/register.hpp"
 
-ConfigClass& getConfig() {
-    static Configuration raw(modInfo);
-    static ConfigClass config(raw);
+#include "questui/shared/QuestUI.hpp"
+
+#include "Hooks/MainViewControllerHook.hpp"
+#include "Hooks/NoteCutHapticEffectHook.hpp"
+#include "Hooks/ObstacleSaberSparkleEffectManagerHook.hpp"
+#include "Hooks/SaberClashEffectHook.hpp"
+#include "Hooks/VRInputModuleHook.hpp"
+using namespace RumbleMod::Hooks;
+
+#include "UI/ViewControllers/RumbleModSettingsViewController.hpp"
+using namespace RumbleMod::UI::ViewControllers;
+
+static ModInfo modInfo; // Stores the ID and version of our mod, and is sent to the modloader upon startup
+
+// Loads the config from disk using our modInfo, then returns it for use
+Configuration& getConfig() {
+    static Configuration config(modInfo);
+    config.Load();
     return config;
 }
 
+// Returns a logger, useful for printing debug messages
+Logger& getLogger() {
+    static Logger* logger = new Logger(modInfo);
+    return *logger;
+}
+
+// Called at the early stages of game loading
 extern "C" void setup(ModInfo& info) {
     info.id = ID;
     info.version = VERSION;
     modInfo = info;
-    getLogger().info("Setting up Rumble mod.");
+
+    getConfig().Load(); // Load the config file
+    getModConfig().Init(info);
+    getConfig().Reload();
+    getConfig().Write();
+    getLogger().info("Completed setup!");
 }
 
+// Called later on in the game loading - a good time to install function hooks
 extern "C" void load() {
-    getLogger().info("Loading Rumble...");
-    RRQInstallHooks();
-    RRQRegisterUI(modInfo);
-    getLogger().info("Finished loading Rumble.");
+    il2cpp_functions::Init();
+    custom_types::Register::AutoRegister();
+    QuestUI::Init();
+    QuestUI::Register::RegisterModSettingsViewController<RumbleModSettingsViewController*>(modInfo);
+
+    //if (getModConfig().enabled.GetValue()) {
+        new MainMenuViewControllerHook("MainMenuViewController");
+        new NoteCutHapticEffectHook("NoteCutHapticEffect");
+        new ObstacleSaberSparkleEffectManagerHook("ObstacleSaberSparkleEffectManager");
+        new SaberClashEffectHook("SaberClashEffect");
+        new VRInputModuleHook("VRInputModule");
+
+    //}
+
+    getLogger().info("Installing hooks...");
+    if (!IHook::InstallHooks())
+        getLogger().error("Failed to install hooks");
+    else
+        getLogger().info("Finished installing hooks!");
+    getLogger().info("Installed all hooks!");
 }
