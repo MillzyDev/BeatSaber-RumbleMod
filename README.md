@@ -1,17 +1,9 @@
-RumbleRumbleQuest
-=================
+# RumbleMod
 
-![cover](./cover.gif)
-
-Quest BeatSaber mod for altering haptic feedback behaviors. A port of the RumbleMod to the Quest.
-
-## Settings
-
-The preferred way is to use the in-game UI for configuration.
-
-![config](./config.jpg)
+Customisable controller feedback
 
 ## Credits
 
-* Original PC RumbleMod made by nalulululuna: [nalulululuna/RumbleMod](https://github.com/nalulululuna/RumbleMod)
-* Libraries: [QuestUI](https://github.com/darknight1050/questui), [beatsaber-hook](https://github.com/sc2ad/beatsaber-hook), [codegen](https://github.com/sc2ad/BeatSaber-Quest-Codegen), [custom-types](https://github.com/sc2ad/Il2CppQuestTypePatching)
+* [zoller27osu](https://github.com/zoller27osu), [Sc2ad](https://github.com/Sc2ad) and [jakibaki](https://github.com/jakibaki) - [beatsaber-hook](https://github.com/sc2ad/beatsaber-hook)
+* [raftario](https://github.com/raftario) 
+* [Lauriethefish](https://github.com/Lauriethefish) and [danrouse](https://github.com/danrouse) for [this template](https://github.com/Lauriethefish/quest-mod-template)

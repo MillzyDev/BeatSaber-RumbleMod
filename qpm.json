@@ -2,21 +2,16 @@
   "sharedDir": "shared",
   "dependenciesDir": "extern",
   "info": {
-    "name": "Rumble Rumble Quest",
-    "id": "rumblerumblequest",
-    "version": "1.1.0",
+    "name": "RumbleMod",
+    "id": "RumbleMod",
+    "version": "2.0.0",
     "url": null,
     "additionalData": {}
   },
   "dependencies": [
     {
-      "id": "custom-types",
-      "versionRange": "^0.4.4",
-      "additionalData": {}
-    },
-    {
       "id": "beatsaber-hook",
-      "versionRange": "^1.0.12",
+      "versionRange": "^2.3.0",
       "additionalData": {
         "extraFiles": [
           "src/inline-hook"
@@ -24,23 +19,23 @@
       }
     },
     {
-      "id": "libil2cpp",
-      "versionRange": "^0.1.2",
-      "additionalData": {}
-    },
-    {
-      "id": "modloader",
-      "versionRange": "^1.0.4",
-      "additionalData": {}
-    },
-    {
       "id": "codegen",
-      "versionRange": "^0.6.2",
+      "versionRange": "^0.14.0",
+      "additionalData": {}
+    },
+    {
+      "id": "custom-types",
+      "versionRange": "^0.12.7",
       "additionalData": {}
     },
     {
       "id": "questui",
-      "versionRange": "^0.4.3",
+      "versionRange": "^0.11.1",
+      "additionalData": {}
+    },
+    {
+      "id": "config-utils",
+      "versionRange": "*",
       "additionalData": {}
     }
   ],
