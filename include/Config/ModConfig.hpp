@@ -12,10 +12,10 @@ DECLARE_CONFIG(ModConfig,
 
         CONFIG_INIT_FUNCTION(
         CONFIG_INIT_VALUE(enabled);
-        CONFIG_INIT_VALUE(strength);
-        CONFIG_INIT_VALUE(duration);
-        CONFIG_INIT_VALUE(strength_saber);
-        CONFIG_INIT_VALUE(strength_wall);
-        CONFIG_INIT_VALUE(strength_ui);
+            CONFIG_INIT_VALUE(strength);
+            CONFIG_INIT_VALUE(duration);
+            CONFIG_INIT_VALUE(strength_saber);
+            CONFIG_INIT_VALUE(strength_wall);
+            CONFIG_INIT_VALUE(strength_ui);
                 )
                )
