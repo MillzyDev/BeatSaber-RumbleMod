@@ -8,7 +8,6 @@ using namespace RumbleMod;
 
 #include "questui/shared/QuestUI.hpp"
 
-#include "Hooks/MainViewControllerHook.hpp"
 #include "Hooks/NoteCutHapticEffectHook.hpp"
 #include "Hooks/ObstacleSaberSparkleEffectManagerHook.hpp"
 #include "Hooks/SaberClashEffectHook.hpp"
@@ -54,7 +53,6 @@ extern "C" void load() {
     QuestUI::Register::RegisterModSettingsViewController<RumbleModSettingsViewController*>(modInfo);
 
     //if (getModConfig().enabled.GetValue()) {
-        new MainMenuViewControllerHook("MainMenuViewController");
         new NoteCutHapticEffectHook("NoteCutHapticEffect");
         new ObstacleSaberSparkleEffectManagerHook("ObstacleSaberSparkleEffectManager");
         new SaberClashEffectHook("SaberClashEffect");
