@@ -135,29 +135,6 @@ RumbleModSettingsViewController::DidActivate(bool firstActivation, bool addedToH
 }
 
 void RumbleModSettingsViewController::DidDeactivate(bool removedFromHeirarchy, bool screenSystemDisabling) {
-
-    /*
-     *   if (getModConfig().enabled.GetValue()) {
-     *       IHook::UninstallHooks();
-     *
-     *      new NoteCutHapticEffectHook("NoteCutHapticEffect");
-     *      new ObstacleSaberSparkleEffectManagerHook("ObstacleSaberSparkleEffectManager");
-     *      new SaberClashEffectHook("SaberClashEffect");
-     *      new VRInputModuleHook("VRInputModule");
-     */
-
-    if (!NoteCutHapticEffectHook::rumblePreset)
-        NoteCutHapticEffectHook::rumblePreset = ScriptableObject::CreateInstance<HapticPresetSO*>();
-
-    NoteCutHapticEffectHook::rumblePreset->duration = getModConfig().duration.GetValue();
-    NoteCutHapticEffectHook::rumblePreset->strength = getModConfig().strength.GetValue();
-
-    /*
-     * } else {
-     *  IHook::UninstallHooks();
-     * }
-     */
-
     Resources::FindObjectsOfTypeAll<MenuTransitionsHelper*>()->values[0]->RestartGame(nullptr);
     // soft restart to stop crashes on song load
 }

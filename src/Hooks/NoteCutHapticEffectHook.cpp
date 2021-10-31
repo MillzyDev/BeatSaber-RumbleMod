@@ -18,11 +18,19 @@ using namespace Libraries::HM::HMLib::VR;
 MAKE_HOOK_MATCH(NoteCutHapticEffect_HitNote, &NoteCutHapticEffect::HitNote, void,
     NoteCutHapticEffect* self, SaberType saberType
 ) {
-    if ((getModConfig().enabled.GetValue()) && (getModConfig().strength.GetValue() > 0) && (getModConfig().duration.GetValue() > 0)) {
-        self->hapticFeedbackController->PlayHapticFeedback(XRNode(saberType.value), static_cast<HapticPresetSO*>(NoteCutHapticEffectHook::rumblePreset));
+    static float originalStrength = self->rumblePreset->strength;
+    static float originalDuration = self->rumblePreset->duration;
+
+    if (getModConfig().enabled.GetValue()) {
+        self->rumblePreset->strength = getModConfig().strength.GetValue();
+        self->rumblePreset->duration = getModConfig().duration.GetValue();
+        getLogger().info("Note Rumble: strength=%f, duration=%f", getModConfig().strength.GetValue(), getModConfig().duration.GetValue());
+    } else {
+        self->rumblePreset->strength = originalStrength;
+        self->rumblePreset->duration = originalDuration;
     }
 
-    return;
+    NoteCutHapticEffect_HitNote(self, saberType);
 }
 
 void NoteCutHapticEffectHook::AddHooks() {
