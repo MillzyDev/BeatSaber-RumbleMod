@@ -1,0 +1,86 @@
+<bg xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:noNamespaceSchemaLocation='https://raw.githubusercontent.com/RedBrumbler/Quest-BSML-Docs/gh-pages/schema.xsd'>
+    <settings-container>
+        <horizontal spacing="4">
+            <text color="red" align="Center" text="Use at your own risk!"/>
+            <button font-size="4" text="Default"/>
+            <button font-size="4" text="Recommended"/>
+        </horizontal>
+
+        <horizontal>
+            <toggle-setting text="Enable RumbleMod"/>
+        </horizontal>
+
+        <horizontal>
+            <horizontal>
+                <text text="Note Strength" italics="true" font-size="4"/>
+            </horizontal>
+            <horizontal>
+                <slider-setting text="" increment="0.05" min="0" max="1"/>
+            </horizontal>
+            <horizontal>
+                <action-button text="Rumble"/>
+            </horizontal>
+        </horizontal>
+
+        <horizontal>
+            <horizontal>
+                <text text="Chain Strength" italics="true" font-size="4"/>
+            </horizontal>
+            <horizontal>
+                <slider-setting text="" increment="0.05" min="0" max="1"/>
+            </horizontal>
+            <horizontal>
+                <action-button text="Rumble"/>
+            </horizontal>
+        </horizontal>
+
+        <horizontal>
+            <horizontal>
+                <text text="Arc Strength" italics="true" font-size="4"/>
+            </horizontal>
+            <horizontal>
+                <slider-setting text="" increment="0.05" min="0" max="1"/>
+            </horizontal>
+            <horizontal>
+                <action-button text="Rumble"/>
+            </horizontal>
+        </horizontal>
+
+        <horizontal>
+            <horizontal>
+                <text text="Saber Strength" italics="true" font-size="4"/>
+            </horizontal>
+            <horizontal>
+                <slider-setting text="" increment="0.05" min="0" max="1"/>
+            </horizontal>
+            <horizontal>
+                <action-button text="Rumble"/>
+            </horizontal>
+        </horizontal>
+
+        <horizontal>
+            <horizontal>
+                <text text="Wall Strength" italics="true" font-size="4"/>
+            </horizontal>
+            <horizontal>
+                <slider-setting text="" increment="0.05" min="0" max="1"/>
+            </horizontal>
+            <horizontal>
+                <action-button text="Rumble"/>
+            </horizontal>
+        </horizontal>
+
+        <horizontal>
+            <horizontal>
+                <text text="UI Strength" italics="true" font-size="4"/>
+            </horizontal>
+            <horizontal>
+                <slider-setting text="" increment="0.05" min="0" max="1"/>
+            </horizontal>
+            <horizontal>
+                <action-button text="Rumble"/>
+            </horizontal>
+        </horizontal>
+    </settings-container>
+</bg>
