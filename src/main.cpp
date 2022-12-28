@@ -19,7 +19,7 @@ extern "C" void setup(ModInfo& info) {
     info.version = VERSION;
     modInfo = info;
 
-    getModConfig().Init(modInfo);
+    ModConfig_t::Init(modInfo);
     getLogger().info("Completed setup!");
 }
 
