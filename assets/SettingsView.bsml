@@ -16,7 +16,7 @@
                 <text text="Note Strength" italics="true" font-size="4"/>
             </horizontal>
             <horizontal>
-                <slider-setting text="" increment="0.05" min="0" max="1"/>
+                <slider-setting show-buttons="true" text="" increment="0.05" min="0" max="1"/>
             </horizontal>
             <horizontal>
                 <action-button text="Rumble"/>
@@ -28,7 +28,7 @@
                 <text text="Chain Strength" italics="true" font-size="4"/>
             </horizontal>
             <horizontal>
-                <slider-setting text="" increment="0.05" min="0" max="1"/>
+                <slider-setting show-buttons="true" text="" increment="0.05" min="0" max="1"/>
             </horizontal>
             <horizontal>
                 <action-button text="Rumble"/>
@@ -40,7 +40,7 @@
                 <text text="Arc Strength" italics="true" font-size="4"/>
             </horizontal>
             <horizontal>
-                <slider-setting text="" increment="0.05" min="0" max="1"/>
+                <slider-setting show-buttons="true" text="" increment="0.05" min="0" max="1"/>
             </horizontal>
             <horizontal>
                 <action-button text="Rumble"/>
@@ -52,7 +52,7 @@
                 <text text="Saber Strength" italics="true" font-size="4"/>
             </horizontal>
             <horizontal>
-                <slider-setting text="" increment="0.05" min="0" max="1"/>
+                <slider-setting show-buttons="true" text="" increment="0.05" min="0" max="1"/>
             </horizontal>
             <horizontal>
                 <action-button text="Rumble"/>
@@ -64,7 +64,7 @@
                 <text text="Wall Strength" italics="true" font-size="4"/>
             </horizontal>
             <horizontal>
-                <slider-setting text="" increment="0.05" min="0" max="1"/>
+                <slider-setting show-buttons="true" text="" increment="0.05" min="0" max="1"/>
             </horizontal>
             <horizontal>
                 <action-button text="Rumble"/>
@@ -76,7 +76,7 @@
                 <text text="UI Strength" italics="true" font-size="4"/>
             </horizontal>
             <horizontal>
-                <slider-setting text="" increment="0.05" min="0" max="1"/>
+                <slider-setting show-buttons="true" text="" increment="0.05" min="0" max="1"/>
             </horizontal>
             <horizontal>
                 <action-button text="Rumble"/>
