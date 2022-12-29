@@ -1,4 +1,4 @@
-#include "UI/ViewControllers/SettingsViewController.hpp"
+#include "UI/Controllers/SettingsController.hpp"
 
 #include "Configuration/ModConfig.hpp"
 
@@ -17,14 +17,18 @@ void klass::set_##valueName(valueType value) {                                  
 }
 
 #define PROPERTY_DEFINITION(valueType, valueName, configName, setFunc) \
-__PROPERTY_DEFINITION(SettingsViewController, valueType, valueName, getModConfig(), configName, setFunc)
+__PROPERTY_DEFINITION(SettingsController, valueType, valueName, getModConfig(), configName, setFunc)
 
-DEFINE_TYPE(RumbleMod::UI::ViewControllers, SettingsViewController)
+DEFINE_TYPE(RumbleMod::UI::Controllers, SettingsController)
 
-namespace RumbleMod::UI::ViewControllers {
-    void SettingsViewController::DidActivate(bool firstActivation, bool addedToHierarchy, bool screenSystemEnabling) {
-        if (firstActivation)
-            BSML::parse_and_construct(IncludedAssets::SettingsView_bsml, get_transform(), this);
+namespace RumbleMod::UI::Controllers {
+    SafePtr<SettingsController> SettingsController::instance;
+
+    SettingsController *SettingsController::get_instance() {
+        if (!instance)
+            instance = SettingsController::New_ctor();
+
+        return instance.ptr();
     }
 
 #pragma region UI Values
@@ -36,4 +40,8 @@ namespace RumbleMod::UI::ViewControllers {
     PROPERTY_DEFINITION(float, WallStrength, wallStrength,)
     PROPERTY_DEFINITION(float, UIStrength, uiStrength,)
 #pragma endregion
+}
+
+BSML_DATACACHE(settings) {
+    return IncludedAssets::SettingsView_bsml;
 }
