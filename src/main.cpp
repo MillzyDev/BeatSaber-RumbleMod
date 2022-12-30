@@ -1,50 +1,37 @@
 #include "main.hpp"
-#include "hooks.hpp"
-
-#include "ModloaderUtils.hpp"
-
+#include "hooking.hpp"
+#include "logging.hpp"
 #include "Configuration/ModConfig.hpp"
 
-#include "UI/Controllers/SettingsController.hpp"
-
 #include "custom-types/shared/register.hpp"
-
+#include "lapiz/shared/zenject/Zenjector.hpp"
+#include "lapiz/shared/AttributeRegistration.hpp"
 #include "bsml/shared/BSML.hpp"
 
-static ModInfo modInfo; // Stores the ID and version of our mod, and is sent to the modloader upon startup
+#include "Installers/MenuInstaller.hpp"
 
-// Returns a logger, useful for printing debug messages
-Logger& getLogger() {
-    static auto* logger = new Logger(modInfo);
-    return *logger;
-}
+static ModInfo modInfo {MOD_ID, VERSION};
 
-// Called at the early stages of game loading
 extern "C" void setup(ModInfo& info) {
-    info.id = MOD_ID;
-    info.version = VERSION;
     modInfo = info;
-
-    ModConfig_t::Init(modInfo);
-    getLogger().info("Completed setup!");
 }
 
 bool tooManyTweaks;
 
-// Called later on in the game loading - a good time to install function hooks
 extern "C" void load() {
-    il2cpp_functions::Init();
+    ModConfig_t::Init(modInfo);
+
+    ::il2cpp_functions::Init();
     ::BSML::Init();
-
     ::custom_types::Register::AutoRegister();
+    ::Lapiz::Attributes::AutoRegister();
 
-    tooManyTweaks = RumbleMod::ModloaderUtils::modIsInstalled("toomanytweaks");
+    // false if toomanytweaks is not installed/cannot be loaded
+    auto mods = ::Modloader::getMods();
+    tooManyTweaks = mods.find("toomanytweaks") != mods.end();
 
-    getLogger().info("Installing hooks...");
     Hooks::InstallHooks(getLogger());
-    getLogger().info("Installed all hooks!");
 
-    ::BSML::Register::RegisterSettingsMenu("RumbleMod", MOD_ID "_settings",
-                                           ::RumbleMod::UI::Controllers::SettingsController::get_instance(),
-                                           false);
+    auto zenjector = ::Lapiz::Zenject::Zenjector::Get();
+    zenjector->Install<::RumbleMod::Installers::MenuInstaller *>(::Lapiz::Zenject::Location::Menu);
 }
