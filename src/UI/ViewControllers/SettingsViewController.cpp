@@ -12,6 +12,11 @@
 type SettingsViewController::get_##name() get               \
 void SettingsViewController::set_##name(type value) set
 
+#define CHANGED_RUMBLE_VALUE_ENABLED(value, text, slider, button) \
+text->set_color(value ? Color::get_green() : Color::get_red();      \
+slider->set_interactable(value);                                    \
+button->set_interactable(value);
+
 DEFINE_TYPE(RumbleMod::UI::ViewControllers, SettingsViewController);
 
 using namespace BSML;
