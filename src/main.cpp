@@ -15,7 +15,6 @@ static ModInfo modInfo {MOD_ID, VERSION};
 extern "C" void setup(ModInfo& info) {
     modInfo = info;
 }
-
 bool tooManyTweaks;
 
 extern "C" void load() {
