@@ -15,11 +15,6 @@
 type SettingsViewController::get_##name() get               \
 void SettingsViewController::set_##name(type value) set
 
-#define CHANGED_RUMBLE_VALUE_ENABLED(value, text, slider, button) \
-text->set_color((value) ? Color::get_green() : Color::get_red()); \
-slider->set_interactable(value);                                  \
-button->set_interactable(value);
-
 DEFINE_TYPE(RumbleMod::UI::ViewControllers, SettingsViewController);
 
 using namespace BSML;
@@ -79,13 +74,31 @@ namespace RumbleMod::UI::ViewControllers {
         TestRumble(getModConfig().uiStrength.GetValue(), 0.02f);
     }
 
+    void SettingsViewController::RumbleEnableChange(bool value, TMPro::TextMeshProUGUI *text,
+                                                    BSML::SliderSetting *slider, UnityEngine::UI::Button *button) {
+        if (!text || !slider || !button) return;
+        text->set_color((value) ? Color::get_green() : Color::get_red());
+        text->set_text(value ? "Enabled" : "Disabled");
+        slider->set_interactable(value);
+        button->set_interactable(value);
+    }
+
+    void SettingsViewController::PostParse() {
+        RumbleEnableChange(get_noteEnabled(), noteEnabledText, noteSlider, noteButton);
+        RumbleEnableChange(get_chainEnabled(), chainEnabledText, chainSlider, chainButton);
+        RumbleEnableChange(get_arcEnabled(), arcEnabledText, arcSlider, arcButton);
+        RumbleEnableChange(get_saberEnabled(), saberEnabledText, saberSlider, saberButton);
+        RumbleEnableChange(get_wallEnabled(), wallEnabledText, wallSlider, wallButton);
+        RumbleEnableChange(get_uiEnabled(), uiEnabledText, uiSlider, uiButton);
+    }
+
     DEFINE_BSML_PROPERTY(bool, noteEnabled,
         { // get
             return getModConfig().noteEnabled.GetValue();
         },
         { // set
             getModConfig().noteEnabled.SetValue(value);
-            CHANGED_RUMBLE_VALUE_ENABLED(value, noteEnabledText, noteSlider, noteButton)
+            RumbleEnableChange(value, noteEnabledText, noteSlider, noteButton);
         }
     )
 
@@ -104,7 +117,7 @@ namespace RumbleMod::UI::ViewControllers {
         },
         { // set
             getModConfig().chainEnabled.SetValue(value);
-            CHANGED_RUMBLE_VALUE_ENABLED(value, chainEnabledText, chainSlider, chainButton)
+            RumbleEnableChange(value, chainEnabledText, chainSlider, chainButton);
         }
     )
 
@@ -123,7 +136,7 @@ namespace RumbleMod::UI::ViewControllers {
         },
         { // set
             getModConfig().arcEnabled.SetValue(value);
-            CHANGED_RUMBLE_VALUE_ENABLED(value, arcEnabledText, arcSlider, arcButton)
+            RumbleEnableChange(value, arcEnabledText, arcSlider, arcButton);
         }
     )
 
@@ -142,7 +155,7 @@ namespace RumbleMod::UI::ViewControllers {
         },
         { // set
             getModConfig().saberEnabled.SetValue(value);
-            CHANGED_RUMBLE_VALUE_ENABLED(value, saberEnabledText, saberSlider, saberButton)
+            RumbleEnableChange(value, saberEnabledText, saberSlider, saberButton);
         }
     )
 
@@ -161,7 +174,7 @@ namespace RumbleMod::UI::ViewControllers {
         },
         { // set
             getModConfig().wallEnabled.SetValue(value);
-            CHANGED_RUMBLE_VALUE_ENABLED(value, wallEnabledText, wallSlider, wallButton)
+            RumbleEnableChange(value, wallEnabledText, wallSlider, wallButton);
         }
     )
 
@@ -180,7 +193,7 @@ namespace RumbleMod::UI::ViewControllers {
         },
         { // set
             getModConfig().uiEnabled.SetValue(value);
-            CHANGED_RUMBLE_VALUE_ENABLED(value, uiEnabledText, uiSlider, uiButton)
+            RumbleEnableChange(value, uiEnabledText, uiSlider, uiButton);
         }
     )
 

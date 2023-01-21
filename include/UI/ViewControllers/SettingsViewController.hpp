@@ -54,6 +54,10 @@ DECLARE_CLASS_CODEGEN(RumbleMod::UI::ViewControllers, SettingsViewController,::H
     DECLARE_INSTANCE_METHOD(void, TestWallRumble);
     DECLARE_INSTANCE_METHOD(void, TestUIRumble);
 
+    DECLARE_INSTANCE_METHOD(void, RumbleEnableChange, bool value, TextMeshProUGUI *text, SliderSetting *slider,
+                            Button *button);
+    DECLARE_INSTANCE_METHOD(void, PostParse);
+
     DECLARE_BSML_PROPERTY(bool, noteEnabled);
     DECLARE_BSML_PROPERTY(float, noteStrength);
     DECLARE_BSML_PROPERTY(bool, chainEnabled);
