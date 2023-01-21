@@ -10,10 +10,10 @@
                         <text text="Enabled" align="MidlineRight" font-size="4" id="noteEnabledText" italics='true'/>
                         <text text=" " align="MidlineLeft" font-size="5"/>
                     </horizontal>
-                    <horizontal preferred-width="90" child-expand-width="true" spacing="0.5" id="noteInteractables">
-                        <slider-setting text="" preferred-width="48" show-buttons="true" min="0" max="1" increment="0.05" value="noteStrength" apply-on-change="true"/>
+                    <horizontal preferred-width="90" child-expand-width="true" spacing="0.5">
+                        <slider-setting id="noteSlider" text="" preferred-width="48" show-buttons="true" min="0" max="1" increment="0.05" value="noteStrength" apply-on-change="true"/>
                         <toggle-setting text="" preferred-width="21" value="noteEnabled" apply-on-change="true"/>
-                        <action-button text="Test" preferred-width="12"/>
+                        <action-button id="noteButton" text="Test" on-click="TestNoteRumble" preferred-width="12"/>
                     </horizontal>
                 </vertical>
             </horizontal>
@@ -25,9 +25,9 @@
                         <text text=" " align="MidlineLeft" font-size="5"/>
                     </horizontal>
                     <horizontal preferred-width="90" child-expand-width="true" spacing="0.5" id="chainInteractables">
-                        <slider-setting text="" preferred-width="48" show-buttons="true" min="0" max="1" increment="0.05" value="chainStrength" apply-on-change="true"/>
+                        <slider-setting id="chainSlider" text="" preferred-width="48" show-buttons="true" min="0" max="1" increment="0.05" value="chainStrength" apply-on-change="true"/>
                         <toggle-setting text="" preferred-width="21" value="chainEnabled" apply-on-change="true"/>
-                        <action-button text="Test" preferred-width="12"/>]
+                        <action-button id="chainButton" text="Test" on-click="TestChainRumble" preferred-width="12"/>]
                     </horizontal>
                 </vertical>
             </horizontal>
@@ -39,9 +39,9 @@
                         <text text=" " align="MidlineLeft" font-size="5"/>
                     </horizontal>
                     <horizontal preferred-width="90" child-expand-width="true" spacing="0.5" id="arcInteractables">
-                        <slider-setting text="" preferred-width="48" show-buttons="true" min="0" max="1" increment="0.05" value="arcStrength" apply-on-change="true"/>
+                        <slider-setting id="arcSlider" text="" preferred-width="48" show-buttons="true" min="0" max="1" increment="0.05" value="arcStrength" apply-on-change="true"/>
                         <toggle-setting text="" preferred-width="21" value="arcEnabled" apply-on-change="true"/>
-                        <action-button text="Test" preferred-width="12"/>
+                        <action-button id="arcButton" text="Test" on-click="TestArcRumble" preferred-width="12"/>
                     </horizontal>
                 </vertical>
             </horizontal>
@@ -53,9 +53,9 @@
                         <text text=" " align="MidlineLeft" font-size="5"/>
                     </horizontal>
                     <horizontal preferred-width="90" child-expand-width="true" spacing="0.5" id="saberInteractables">
-                        <slider-setting text="" preferred-width="48" show-buttons="true" min="0" max="1" increment="0.05" value="saberStrength" apply-on-change="true"/>
+                        <slider-setting id="saberSlider" text="" preferred-width="48" show-buttons="true" min="0" max="1" increment="0.05" value="saberStrength" apply-on-change="true"/>
                         <toggle-setting text="" preferred-width="21" value="saberEnabled" apply-on-change="true"/>
-                        <action-button text="Test" preferred-width="12"/>
+                        <action-button id="saberButton" text="Test" on-click="TestSaberRumble" preferred-width="12"/>
                     </horizontal>
                 </vertical>
             </horizontal>
@@ -67,9 +67,9 @@
                         <text text=" " align="MidlineLeft" font-size="5"/>
                     </horizontal>
                     <horizontal preferred-width="90" child-expand-width="true" spacing="0.5" id="wallInteractables">
-                        <slider-setting text="" preferred-width="48" show-buttons="true" min="0" max="1" increment="0.05" value="wallStrength" apply-on-change="true"/>
+                        <slider-setting id="wallSlider" text="" preferred-width="48" show-buttons="true" min="0" max="1" increment="0.05" value="wallStrength" apply-on-change="true"/>
                         <toggle-setting text="" preferred-width="21" value="wallEnabled" apply-on-change="true"/>
-                        <action-button text="Test" preferred-width="12"/>
+                        <action-button id="wallButton" text="Test" on-click="TestWallRumble" preferred-width="12"/>
                     </horizontal>
                 </vertical>
             </horizontal>
@@ -81,9 +81,9 @@
                         <text text=" " align="MidlineLeft" font-size="5"/>
                     </horizontal>
                     <horizontal preferred-width="90" child-expand-width="true" spacing="0.5" id="uiInteractables">
-                        <slider-setting text="" preferred-width="48" show-buttons="true" min="0" max="1" increment="0.05" value="uiStrength" apply-on-change="true"/>
+                        <slider-setting id="uiSlider" text="" preferred-width="48" show-buttons="true" min="0" max="1" increment="0.05" value="uiStrength" apply-on-change="true"/>
                         <toggle-setting text="" preferred-width="21" value="uiEnabled" apply-on-change="true"/>
-                        <action-button text="Test" preferred-width="12"/>
+                        <action-button id="uiButton" text="Test" on-click="TestUIRumble" preferred-width="12"/>
                     </horizontal>
                 </vertical>
             </horizontal>
