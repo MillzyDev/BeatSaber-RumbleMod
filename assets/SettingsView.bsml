@@ -21,10 +21,10 @@
                 <vertical pad="5" horizontal-fit="PreferredSize" vertical-fit="MinSize" preferred-width="100" preferred-height="20" spacing="6">
                     <horizontal preferred-width="90" child-expand-width="true" spacing="0">
                         <text text="&lt;color=#FFF>Chain Strength" align="MidlineLeft" font-size="5" color='#69B' underlined='true' italics='true'/>
-                        <text text="Enabled" align="MidlineRight" font-size="4" color='#69B' italics='true'/>
+                        <text text="Enabled" align="MidlineRight" font-size="4" color='#69B' id="chainEnabledText" italics='true'/>
                         <text text=" " align="MidlineLeft" font-size="5"/>
                     </horizontal>
-                    <horizontal preferred-width="90" child-expand-width="true" spacing="0.5">
+                    <horizontal preferred-width="90" child-expand-width="true" spacing="0.5" id="chainInteractables">
                         <slider-setting text="" preferred-width="48" show-buttons="true" min="0" max="1" increment="0.05"/>
                         <toggle-setting text="" preferred-width="21"/>
                         <action-button text="Test" preferred-width="12"/>]
@@ -35,10 +35,10 @@
                 <vertical pad="5" horizontal-fit="PreferredSize" vertical-fit="MinSize" preferred-width="100" preferred-height="20" spacing="6">
                     <horizontal preferred-width="90" child-expand-width="true" spacing="0">
                         <text text="&lt;color=#FFF>Arc Strength" align="MidlineLeft" font-size="5" color='#69B' underlined='true' italics='true'/>
-                        <text text="Enabled" align="MidlineRight" font-size="4" color='#69B' italics='true'/>
+                        <text text="Enabled" align="MidlineRight" font-size="4" color='#69B' italics='true' id="arcEnabledText"/>
                         <text text=" " align="MidlineLeft" font-size="5"/>
                     </horizontal>
-                    <horizontal preferred-width="90" child-expand-width="true" spacing="0.5">
+                    <horizontal preferred-width="90" child-expand-width="true" spacing="0.5" id="arcInteractables">
                         <slider-setting text="" preferred-width="48" show-buttons="true" min="0" max="1" increment="0.05"/>
                         <toggle-setting text="" preferred-width="21"/>
                         <action-button text="Test" preferred-width="12"/>
@@ -48,11 +48,11 @@
             <horizontal background-color='cyan' bg="round-rect-panel" horizontal-fit="PreferredSize" vertical-fit="MinSize" preferred-width="100" min-height="17">
                 <vertical pad="5" horizontal-fit="PreferredSize" vertical-fit="MinSize" preferred-width="100" preferred-height="20" spacing="6">
                     <horizontal preferred-width="90" child-expand-width="true" spacing="0">
-                        <text text="&lt;color=#FFF>Saber Strength" align="MidlineLeft" font-size="5" color='#69B' underlined='true' italics='true'/>
+                        <text text="&lt;color=#FFF>Saber Strength" align="MidlineLeft" font-size="5" color='#69B' id="saberEnabledText" underlined='true' italics='true'/>
                         <text text="Enabled" align="MidlineRight" font-size="4" color='#69B' italics='true'/>
                         <text text=" " align="MidlineLeft" font-size="5"/>
                     </horizontal>
-                    <horizontal preferred-width="90" child-expand-width="true" spacing="0.5">
+                    <horizontal preferred-width="90" child-expand-width="true" spacing="0.5" id="saberInteractables">
                         <slider-setting text="" preferred-width="48" show-buttons="true" min="0" max="1" increment="0.05"/>
                         <toggle-setting text="" preferred-width="21"/>
                         <action-button text="Test" preferred-width="12"/>
@@ -62,11 +62,11 @@
             <horizontal background-color='cyan' bg="round-rect-panel" horizontal-fit="PreferredSize" vertical-fit="MinSize" preferred-width="100" min-height="17">
                 <vertical pad="5" horizontal-fit="PreferredSize" vertical-fit="MinSize" preferred-width="100" preferred-height="20" spacing="6">
                     <horizontal preferred-width="90" child-expand-width="true" spacing="0">
-                        <text text="&lt;color=#FFF>Wall Strength" align="MidlineLeft" font-size="5" color='#69B' underlined='true' italics='true'/>
+                        <text text="&lt;color=#FFF>Wall Strength" align="MidlineLeft" font-size="5" color='#69B' id="wallEnabledText" underlined='true' italics='true'/>
                         <text text="Enabled" align="MidlineRight" font-size="4" color='#69B' italics='true'/>
                         <text text=" " align="MidlineLeft" font-size="5"/>
                     </horizontal>
-                    <horizontal preferred-width="90" child-expand-width="true" spacing="0.5">
+                    <horizontal preferred-width="90" child-expand-width="true" spacing="0.5" id="wallInteractables">
                         <slider-setting text="" preferred-width="48" show-buttons="true" min="0" max="1" increment="0.05"/>
                         <toggle-setting text="" preferred-width="21"/>
                         <action-button text="Test" preferred-width="12"/>
@@ -77,10 +77,10 @@
                 <vertical pad="5" horizontal-fit="PreferredSize" vertical-fit="MinSize" preferred-width="100" preferred-height="20" spacing="6">
                     <horizontal preferred-width="90" child-expand-width="true" spacing="0">
                         <text text="&lt;color=#FFF>UI Strength" align="MidlineLeft" font-size="5" color='#69B' underlined='true' italics='true'/>
-                        <text text="Enabled" align="MidlineRight" font-size="4" color='#69B' italics='true'/>
+                        <text text="Enabled" align="MidlineRight" font-size="4" color='#69B' id="wallEnabledText" italics='true'/>
                         <text text=" " align="MidlineLeft" font-size="5"/>
                     </horizontal>
-                    <horizontal preferred-width="90" child-expand-width="true" spacing="0.5">
+                    <horizontal preferred-width="90" child-expand-width="true" spacing="0.5" id="uiInteractables">
                         <slider-setting text="" preferred-width="48" show-buttons="true" min="0" max="1" increment="0.05"/>
                         <toggle-setting text="" preferred-width="21"/>
                         <action-button text="Test" preferred-width="12"/>
