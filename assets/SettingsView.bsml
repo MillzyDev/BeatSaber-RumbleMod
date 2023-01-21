@@ -1,90 +1,92 @@
 <bg xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
     xsi:noNamespaceSchemaLocation='https://raw.githubusercontent.com/RedBrumbler/Quest-BSML-Docs/gh-pages/schema.xsd'
     anchor-pos-y='5'>
-    <settings-container >
-        <horizontal background-color='cyan' bg="round-rect-panel" horizontal-fit="PreferredSize" vertical-fit="MinSize" preferred-width="100" min-height="17">
-            <vertical pad="5" horizontal-fit="PreferredSize" vertical-fit="MinSize" preferred-width="100" preferred-height="20" spacing="6">
-                <horizontal preferred-width="90" child-expand-width="true" spacing="0">
-                    <text text="&lt;color=#FFF>Note Strength" align="MidlineLeft" font-size="5" color='#69B' underlined='true' italics='true'/>
-                    <text text="Enabled" align="MidlineRight" font-size="4" color='#69B' italics='true'/>
-                    <text text=" " align="MidlineLeft" font-size="5"/>
-                </horizontal>
-                <horizontal preferred-width="90" child-expand-width="true" spacing="0.5">
-                    <slider-setting text="" preferred-width="48" show-buttons="true" min="0" max="1" increment="0.05"/>
-                    <toggle-setting text="" preferred-width="21"/>
-                    <action-button text="Test"/>
-                </horizontal>
-            </vertical>
-        </horizontal>
-        <horizontal background-color='cyan' bg="round-rect-panel" horizontal-fit="PreferredSize" vertical-fit="MinSize" preferred-width="100" min-height="17">
-            <vertical pad="5" horizontal-fit="PreferredSize" vertical-fit="MinSize" preferred-width="100" preferred-height="20" spacing="6">
-                <horizontal preferred-width="90" child-expand-width="true" spacing="0">
-                    <text text="&lt;color=#FFF>Chain Strength" align="MidlineLeft" font-size="5" color='#69B' underlined='true' italics='true'/>
-                    <text text="Enabled" align="MidlineRight" font-size="4" color='#69B' italics='true'/>
-                    <text text=" " align="MidlineLeft" font-size="5"/>
-                </horizontal>
-                <horizontal preferred-width="90" child-expand-width="true" spacing="0.5">
-                    <slider-setting text="" preferred-width="48" show-buttons="true" min="0" max="1" increment="0.05"/>
-                    <toggle-setting text="" preferred-width="21"/>
-                    <action-button text="Test"/>
-                </horizontal>
-            </vertical>
-        </horizontal>
-        <horizontal background-color='cyan' bg="round-rect-panel" horizontal-fit="PreferredSize" vertical-fit="MinSize" preferred-width="100" min-height="17">
-            <vertical pad="5" horizontal-fit="PreferredSize" vertical-fit="MinSize" preferred-width="100" preferred-height="20" spacing="6">
-                <horizontal preferred-width="90" child-expand-width="true" spacing="0">
-                    <text text="&lt;color=#FFF>Arc Strength" align="MidlineLeft" font-size="5" color='#69B' underlined='true' italics='true'/>
-                    <text text="Enabled" align="MidlineRight" font-size="4" color='#69B' italics='true'/>
-                    <text text=" " align="MidlineLeft" font-size="5"/>
-                </horizontal>
-                <horizontal preferred-width="90" child-expand-width="true" spacing="0.5">
-                    <slider-setting text="" preferred-width="48" show-buttons="true" min="0" max="1" increment="0.05"/>
-                    <toggle-setting text="" preferred-width="21"/>
-                    <action-button text="Test"/>
-                </horizontal>
-            </vertical>
-        </horizontal>
-        <horizontal background-color='cyan' bg="round-rect-panel" horizontal-fit="PreferredSize" vertical-fit="MinSize" preferred-width="100" min-height="17">
-            <vertical pad="5" horizontal-fit="PreferredSize" vertical-fit="MinSize" preferred-width="100" preferred-height="20" spacing="6">
-                <horizontal preferred-width="90" child-expand-width="true" spacing="0">
-                    <text text="&lt;color=#FFF>Saber Strength" align="MidlineLeft" font-size="5" color='#69B' underlined='true' italics='true'/>
-                    <text text="Enabled" align="MidlineRight" font-size="4" color='#69B' italics='true'/>
-                    <text text=" " align="MidlineLeft" font-size="5"/>
-                </horizontal>
-                <horizontal preferred-width="90" child-expand-width="true" spacing="0.5">
-                    <slider-setting text="" preferred-width="48" show-buttons="true" min="0" max="1" increment="0.05"/>
-                    <toggle-setting text="" preferred-width="21"/>
-                    <action-button text="Test"/>
-                </horizontal>
-            </vertical>
-        </horizontal>
-        <horizontal background-color='cyan' bg="round-rect-panel" horizontal-fit="PreferredSize" vertical-fit="MinSize" preferred-width="100" min-height="17">
-            <vertical pad="5" horizontal-fit="PreferredSize" vertical-fit="MinSize" preferred-width="100" preferred-height="20" spacing="6">
-                <horizontal preferred-width="90" child-expand-width="true" spacing="0">
-                    <text text="&lt;color=#FFF>Wall Strength" align="MidlineLeft" font-size="5" color='#69B' underlined='true' italics='true'/>
-                    <text text="Enabled" align="MidlineRight" font-size="4" color='#69B' italics='true'/>
-                    <text text=" " align="MidlineLeft" font-size="5"/>
-                </horizontal>
-                <horizontal preferred-width="90" child-expand-width="true" spacing="0.5">
-                    <slider-setting text="" preferred-width="48" show-buttons="true" min="0" max="1" increment="0.05"/>
-                    <toggle-setting text="" preferred-width="21"/>
-                    <action-button text="Test"/>
-                </horizontal>
-            </vertical>
-        </horizontal>
-        <horizontal background-color='cyan' bg="round-rect-panel" horizontal-fit="PreferredSize" vertical-fit="MinSize" preferred-width="100" min-height="17">
-            <vertical pad="5" horizontal-fit="PreferredSize" vertical-fit="MinSize" preferred-width="100" preferred-height="20" spacing="6">
-                <horizontal preferred-width="90" child-expand-width="true" spacing="0">
-                    <text text="&lt;color=#FFF>UI Strength" align="MidlineLeft" font-size="5" color='#69B' underlined='true' italics='true'/>
-                    <text text="Enabled" align="MidlineRight" font-size="4" color='#69B' italics='true'/>
-                    <text text=" " align="MidlineLeft" font-size="5"/>
-                </horizontal>
-                <horizontal preferred-width="90" child-expand-width="true" spacing="0.5">
-                    <slider-setting text="" preferred-width="48" show-buttons="true" min="0" max="1" increment="0.05"/>
-                    <toggle-setting text="" preferred-width="21"/>
-                    <action-button text="Test"/>
-                </horizontal>
-            </vertical>
-        </horizontal>
-    </settings-container>
+    <vertical horizontal-fit="Unconstrained" vertical-fit="Unconstrained" spacing="-13">
+        <settings-container>
+            <horizontal background-color='cyan' bg="round-rect-panel" horizontal-fit="PreferredSize" vertical-fit="MinSize" preferred-width="100" min-height="17">
+                <vertical pad="5" horizontal-fit="PreferredSize" vertical-fit="MinSize" preferred-width="100" preferred-height="20" spacing="6">
+                    <horizontal preferred-width="90" child-expand-width="true" spacing="0">
+                        <text text="&lt;color=#FFF>Note Strength" align="MidlineLeft" font-size="5" color='#69B' underlined='true' italics='true'/>
+                        <text text="Enabled" align="MidlineRight" font-size="4" color='#69B' id="noteEnabledText" italics='true'/>
+                        <text text=" " align="MidlineLeft" font-size="5"/>
+                    </horizontal>
+                    <horizontal preferred-width="90" child-expand-width="true" spacing="0.5" id="noteInteractables">
+                        <slider-setting text="" preferred-width="48" show-buttons="true" min="0" max="1" increment="0.05"/>
+                        <toggle-setting text="" preferred-width="21"/>
+                        <action-button text="Test" preferred-width="12"/>
+                    </horizontal>
+                </vertical>
+            </horizontal>
+            <horizontal background-color='cyan' bg="round-rect-panel" horizontal-fit="PreferredSize" vertical-fit="MinSize" preferred-width="100" min-height="17">
+                <vertical pad="5" horizontal-fit="PreferredSize" vertical-fit="MinSize" preferred-width="100" preferred-height="20" spacing="6">
+                    <horizontal preferred-width="90" child-expand-width="true" spacing="0">
+                        <text text="&lt;color=#FFF>Chain Strength" align="MidlineLeft" font-size="5" color='#69B' underlined='true' italics='true'/>
+                        <text text="Enabled" align="MidlineRight" font-size="4" color='#69B' italics='true'/>
+                        <text text=" " align="MidlineLeft" font-size="5"/>
+                    </horizontal>
+                    <horizontal preferred-width="90" child-expand-width="true" spacing="0.5">
+                        <slider-setting text="" preferred-width="48" show-buttons="true" min="0" max="1" increment="0.05"/>
+                        <toggle-setting text="" preferred-width="21"/>
+                        <action-button text="Test" preferred-width="12"/>]
+                    </horizontal>
+                </vertical>
+            </horizontal>
+            <horizontal background-color='cyan' bg="round-rect-panel" horizontal-fit="PreferredSize" vertical-fit="MinSize" preferred-width="100" min-height="17">
+                <vertical pad="5" horizontal-fit="PreferredSize" vertical-fit="MinSize" preferred-width="100" preferred-height="20" spacing="6">
+                    <horizontal preferred-width="90" child-expand-width="true" spacing="0">
+                        <text text="&lt;color=#FFF>Arc Strength" align="MidlineLeft" font-size="5" color='#69B' underlined='true' italics='true'/>
+                        <text text="Enabled" align="MidlineRight" font-size="4" color='#69B' italics='true'/>
+                        <text text=" " align="MidlineLeft" font-size="5"/>
+                    </horizontal>
+                    <horizontal preferred-width="90" child-expand-width="true" spacing="0.5">
+                        <slider-setting text="" preferred-width="48" show-buttons="true" min="0" max="1" increment="0.05"/>
+                        <toggle-setting text="" preferred-width="21"/>
+                        <action-button text="Test" preferred-width="12"/>
+                    </horizontal>
+                </vertical>
+            </horizontal>
+            <horizontal background-color='cyan' bg="round-rect-panel" horizontal-fit="PreferredSize" vertical-fit="MinSize" preferred-width="100" min-height="17">
+                <vertical pad="5" horizontal-fit="PreferredSize" vertical-fit="MinSize" preferred-width="100" preferred-height="20" spacing="6">
+                    <horizontal preferred-width="90" child-expand-width="true" spacing="0">
+                        <text text="&lt;color=#FFF>Saber Strength" align="MidlineLeft" font-size="5" color='#69B' underlined='true' italics='true'/>
+                        <text text="Enabled" align="MidlineRight" font-size="4" color='#69B' italics='true'/>
+                        <text text=" " align="MidlineLeft" font-size="5"/>
+                    </horizontal>
+                    <horizontal preferred-width="90" child-expand-width="true" spacing="0.5">
+                        <slider-setting text="" preferred-width="48" show-buttons="true" min="0" max="1" increment="0.05"/>
+                        <toggle-setting text="" preferred-width="21"/>
+                        <action-button text="Test" preferred-width="12"/>
+                    </horizontal>
+                </vertical>
+            </horizontal>
+            <horizontal background-color='cyan' bg="round-rect-panel" horizontal-fit="PreferredSize" vertical-fit="MinSize" preferred-width="100" min-height="17">
+                <vertical pad="5" horizontal-fit="PreferredSize" vertical-fit="MinSize" preferred-width="100" preferred-height="20" spacing="6">
+                    <horizontal preferred-width="90" child-expand-width="true" spacing="0">
+                        <text text="&lt;color=#FFF>Wall Strength" align="MidlineLeft" font-size="5" color='#69B' underlined='true' italics='true'/>
+                        <text text="Enabled" align="MidlineRight" font-size="4" color='#69B' italics='true'/>
+                        <text text=" " align="MidlineLeft" font-size="5"/>
+                    </horizontal>
+                    <horizontal preferred-width="90" child-expand-width="true" spacing="0.5">
+                        <slider-setting text="" preferred-width="48" show-buttons="true" min="0" max="1" increment="0.05"/>
+                        <toggle-setting text="" preferred-width="21"/>
+                        <action-button text="Test" preferred-width="12"/>
+                    </horizontal>
+                </vertical>
+            </horizontal>
+            <horizontal background-color='cyan' bg="round-rect-panel" horizontal-fit="PreferredSize" vertical-fit="MinSize" preferred-width="100" min-height="17">
+                <vertical pad="5" horizontal-fit="PreferredSize" vertical-fit="MinSize" preferred-width="100" preferred-height="20" spacing="6">
+                    <horizontal preferred-width="90" child-expand-width="true" spacing="0">
+                        <text text="&lt;color=#FFF>UI Strength" align="MidlineLeft" font-size="5" color='#69B' underlined='true' italics='true'/>
+                        <text text="Enabled" align="MidlineRight" font-size="4" color='#69B' italics='true'/>
+                        <text text=" " align="MidlineLeft" font-size="5"/>
+                    </horizontal>
+                    <horizontal preferred-width="90" child-expand-width="true" spacing="0.5">
+                        <slider-setting text="" preferred-width="48" show-buttons="true" min="0" max="1" increment="0.05"/>
+                        <toggle-setting text="" preferred-width="21"/>
+                        <action-button text="Test" preferred-width="12"/>
+                    </horizontal>
+                </vertical>
+            </horizontal>
+        </settings-container>
+    </vertical>
 </bg>
